@@ -1,6 +1,6 @@
 #!/bin/bash
 
-addKey(){ #file
+addKey(){
 mkdir ~/.ssh
 cd ~/.ssh
 echo "Host $HOST
