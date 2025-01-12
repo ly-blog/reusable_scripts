@@ -19,5 +19,5 @@ git push o main -f
 eval $(ssh-agent)
 (NAME=codeberg HOST=codeberg.org SSHKEY="$SSHKEY_CODEBERG" addKey)
 cat ~/.ssh/config
-ls ~/.ssh
+ls ~/.ssh -lah
 REMOTE="$REMOTE_CODEBERG" HOST=codeberg.org push
