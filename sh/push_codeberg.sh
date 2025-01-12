@@ -14,7 +14,7 @@ chmod 600 $NAME
 
 push(){
 rm -rf .git
-git init .
+git init . --initial-branch=main
 git config --global user.email ly-blog@github.com
 git config --global user.name ly-blog
 git add .
