@@ -12,7 +12,7 @@ chmod 600 $NAME
 
 push(){
 git remote add o "$REMOTE"
-git push -f o main
+git push o main -f
 }
 
 eval $(ssh-agent)
