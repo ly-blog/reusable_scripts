@@ -5,11 +5,10 @@ mkdir ~/.ssh
 cd ~/.ssh
 echo "Host $HOST
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/$NAME" >>config
+  IdentityFile ~/.ssh/$NAME
+" >>config
 echo "$SSHKEY" >$NAME
 chmod 600 $NAME
-
-cat $NAME
 }
 
 push(){
