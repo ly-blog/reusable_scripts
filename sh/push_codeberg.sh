@@ -8,10 +8,11 @@ echo "Host $HOST
   IdentityFile ~/.ssh/$NAME" >>config
 echo "$SSHKEY" >$NAME
 chmod 600 $NAME
+
+cat $NAME
 }
 
 push(){
-echo "remote is $REMOTE"
 git remote add o "$REMOTE"
 git push o main -f
 }
