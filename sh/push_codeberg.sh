@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 addKey(){ #file
 mkdir ~/.ssh
@@ -24,5 +24,8 @@ git push o main -f
 }
 
 eval $(ssh-agent)
-(NAME=codeberg HOST=codeberg.org SSHKEY="$SSHKEY_CODEBERG" addKey)
-REMOTE="$REMOTE_CODEBERG" HOST=codeberg.org push
+
+if [ -n "$SSHKEY_CODEBERG" ];then
+  (NAME=codeberg HOST=codeberg.org SSHKEY="$SSHKEY_CODEBERG" addKey)
+  REMOTE="$REMOTE_CODEBERG" HOST=codeberg.org push
+fi
