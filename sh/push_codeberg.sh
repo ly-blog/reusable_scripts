@@ -11,6 +11,7 @@ chmod 600 $NAME
 }
 
 push(){
+echo "$REMOTE"
 git remote add o "$REMOTE"
 git push o main -f
 }
