@@ -4,6 +4,7 @@ addKey(){ #file
 mkdir ~/.ssh
 cd ~/.ssh
 echo "Host $HOST
+  StrictHostKeyChecking no
   AddKeysToAgent yes
   IdentityFile ~/.ssh/$NAME
 " >>config
