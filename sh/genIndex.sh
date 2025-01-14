@@ -11,5 +11,5 @@ for d in */;do
 done
 }
 
-echo '### List'>$OF
+echo '## List'>$OF
 (run)>>$OF
