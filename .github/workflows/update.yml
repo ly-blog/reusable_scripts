@@ -1,0 +1,12 @@
+on:
+  push:
+jobs:
+  generate_index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: update index and push
+        env:
+          SSHKEY_CODEBERG: ${{ secrets.SSHKEY_CODEBERG }}
+          REMOTE_CODEBERG: ${{ vars.REMOTE_CODEBERG }}
+        run: chmod +x ./sh/* && ./sh/push_codeberg.sh
